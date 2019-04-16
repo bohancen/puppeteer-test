@@ -1,7 +1,13 @@
 # 仅支持window系统
 
-centos7目前没找到如何调用chrome方法
+## 支持
 
-node ./index.js
+  node -v 8.11.3
+  npm -v 4.6.1
+  
+  linux 在centos7目前没找到如何调用chrome方法
 
+## 启动
+
+  node ./index.js
   http://localhost:444/render?url=https://dazhou.58.com/ershoufang/37788812362517x.shtml
