@@ -39,9 +39,9 @@ app.get('/render',(req,res)=>{
 
     Tesseract.recognize(myImage)
     .then(function(result){
-        console.log(result.text)
-        res.send(result.text)
-        console.log('40'+Object.keys(result))
+      console.log(Object.keys(result))
+      console.log(result.text)
+      res.send(result.text)
     })
   
     await browser.close();
