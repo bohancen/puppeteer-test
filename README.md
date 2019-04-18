@@ -4,8 +4,6 @@
 
   node -v 8.11.3
   npm -v 4.6.1
-  
-  linux 在centos7目前没找到如何调用chrome方法
 
 ## 启动
 

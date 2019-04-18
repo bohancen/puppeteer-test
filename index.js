@@ -18,7 +18,9 @@ app.get('/render',(req,res)=>{
 
   ;(async () => {
     const browser = await puppeteer.launch({executablePath:'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'});
-    // const browser = await puppeteer.launch({executablePath:path.resolve(__dirname,'./chrome-linux/chrome')});
+    // linux centos 手动下载chrome 下载地址
+    // https://www.cnblogs.com/sxdcgaq8080/p/7517357.html
+    // const browser = await puppeteer.launch({executablePath:'/usr/bin/google-chrome-stable',headless:true,args:['--no-sandbox','--disable-setuid-sandbox']})
     const page = await browser.newPage();
     await page.goto(url);
   
