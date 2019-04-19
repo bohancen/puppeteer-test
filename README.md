@@ -1,4 +1,4 @@
-# 仅支持window系统
+# puppeteer-test
 
 ## 支持
 
