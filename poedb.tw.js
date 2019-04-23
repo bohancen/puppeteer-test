@@ -28,7 +28,7 @@ app.get('/',(req,res)=>{
     const tablehtml = await page.evaluate(() => {
       return $('table').html()
     });
-    // console.log('tablehtml')
+    console.log('tablehtml')
     res.send(tablehtml)
     fs.writeFileSync(path.resolve(__dirname,'./table.html'),tablehtml);
   
