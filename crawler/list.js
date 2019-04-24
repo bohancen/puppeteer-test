@@ -10,7 +10,8 @@ const sleep = timeout => new Promise(resolve=>{
     let url = 'http://poedb.tw/item.php?cn=Shield'
 
     const browser = await puppeteer.launch({
-      executablePath:'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+      // executablePath:'"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"',
+      executablePath:'/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe',
       args:['--no-sandbox'],
       dumpio:false
     });
@@ -30,8 +31,15 @@ const sleep = timeout => new Promise(resolve=>{
     // await page.click('.more')
 
     const result = await page.evaluate(() => {
-      return document.body.innerHTML
+      // return document.body.innerHTML
       // return $('table').html()
+      // let table = $('table')
+      let item = $('[data-hasqtip]')
+      let arrlinks = []
+      item.each(function(i,o){
+        arrlinks.push($(o).attr('href'))
+      })
+      return arrlinks
     });
     console.log('result')
 
