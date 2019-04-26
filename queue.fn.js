@@ -3,7 +3,7 @@ async function queueFn(PromiseFns){
   let len = PromiseFns.length
   let index = 0
   let next=async()=>{
-    console.log(`执行中...${index}`)
+    console.log(`执行中...第${index+1}个`)
     let bool = await PromiseFns[index]()
     if(bool){
       console.log('执行成功next')
@@ -24,15 +24,16 @@ async function queueFn(PromiseFns){
 let testPromiseFn = ()=> new Promise((res,rej)=>{
   // time = 1000
   setTimeout(function(){
-    // 55开机率 真假
-    res(Math.random()*10>5)
+    // 55开几率 真假
+    res(Math.random()>.5)
   },1000)
 })
 
 // async函数模拟运行
 
 ;(async()=>{
-  let arrFn = new Array(10).fill(testPromiseFn)
+  // 模拟5个运行
+  let arrFn = new Array(5).fill(testPromiseFn)
   let res = await queueFn(arrFn)
   console.log(res)
 })();
