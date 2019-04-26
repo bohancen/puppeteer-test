@@ -29,8 +29,7 @@ let testPromiseFn = ()=> new Promise((res,rej)=>{
   },1000)
 })
 
-// async函数模拟运行
-
+// async函数环境模拟运行
 ;(async()=>{
   // 模拟5个运行
   let arrFn = new Array(5).fill(testPromiseFn)
