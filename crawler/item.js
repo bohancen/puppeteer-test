@@ -64,6 +64,10 @@ const sleep = timeout => new Promise(resolve=>{
     console.log('result')
     console.log(result)
 
+    result.reduce(()=>{
+      
+    },[])
+
     result.forEach(async (val,index)=>{
       // await sleep(1000)
       // if(index>10){return}
