@@ -12,6 +12,8 @@
   "dependencies": {
     "express": "^4.16.4",
     "puppeteer-core": "^1.14.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
     "tesseract.js": "^1.0.14"
   }
 }
